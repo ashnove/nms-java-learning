@@ -5,15 +5,13 @@ public class general {
                 FastScanner fs = new FastScanner();
                 PrintWriter out = new PrintWriter(System.out);
                 
-                int n = fs.nextInt();
+                Transporter t1 = new Transporter();
+                t1.setnumber("987654321");
+                t1.getnumber();
+                t1.name = "Ashutosh";
+                t1.showName();
                 
-                out.println("testing: " + n * n);
-                        
-
-               
-                out.close();
         }
-
 
 
         static class FastScanner         {
