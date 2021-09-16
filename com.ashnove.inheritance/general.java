@@ -7,7 +7,7 @@ public class general {
                 
                 int n = fs.nextInt();
                 
-                                out.println("testing: " + n * n);
+                out.println("testing: " + n * n);
                         
 
                
@@ -32,11 +32,6 @@ public class general {
 
                 int nextInt() {
                         return Integer.parseInt(next());
-                }
-                int[] readArray(int n) {
-                        int[] a = new int[n];
-                        for (int i = 0; i < n; i++) a[i] = nextInt();
-                        return a;
                 }
                 long nextLong() {
                         return Long.parseLong(next());
