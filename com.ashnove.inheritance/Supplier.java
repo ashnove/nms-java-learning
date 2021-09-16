@@ -13,4 +13,8 @@ public class Supplier extends Person{
 	public void showName() {
 		System.out.println("Supplier's name is: " + name);
 	}
+	
+	public void wholeSaleRateRange() {
+		System.out.println("Rs. 800 - Rs. 900");
+	}
 }

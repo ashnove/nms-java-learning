@@ -14,4 +14,8 @@ public class Consumer extends Person{
 	public void showName() {
 		System.out.println("Consumer's name is: " + name);
 	}
+	
+	public void budget() {
+		System.out.println("Rs. 1000- Rs. 5000");
+	}
 }
