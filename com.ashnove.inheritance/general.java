@@ -5,35 +5,35 @@ public class general {
                 FastScanner fs = new FastScanner();
                 PrintWriter out = new PrintWriter(System.out);
                 
-                out.println("Supplier's Data");
+                System.out.println("Supplier's Data");
                 Supplier s1 = new Supplier();
                 s1.name = "Natrajan";
                 s1.showName();
-                out.println(s1.name + "'s citizenship is "+s1.citizenShip);
+                System.out.println(s1.name + "'s citizenship is "+s1.citizenShip);
                 s1.setnumber("951623478");
                 s1.getnumber();
                 
-                out.println();
+                System.out.println();
                 
-                out.println("Transporter's Data");
+                System.out.println("Transporter's Data");
                 Transporter t1 = new Transporter();
                 t1.name = "Ashutosh";
                 t1.showName();
-                out.println(t1.name + "'s citizenship is "+t1.citizenShip);
+                System.out.println(t1.name + "'s citizenship is "+t1.citizenShip);
                 t1.setnumber("987654321");
                 t1.getnumber();
                 
-                out.println();
+                System.out.println();
                 
-                out.println("Consumer's Data");
+                System.out.println("Consumer's Data");
                 Consumer c1 = new Consumer();
                 c1.name = "Rishav";
                 c1.showName();
-                out.println(c1.name + "'s citizenship is "+c1.citizenShip);
+                System.out.println(c1.name + "'s citizenship is "+c1.citizenShip);
                 c1.setnumber("965455321");
                 c1.getnumber();
                 
-                out.close();
+//                out.close();
         }
 
 
