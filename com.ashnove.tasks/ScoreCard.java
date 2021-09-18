@@ -17,6 +17,7 @@ public class ScoreCard {
                 int numberOfMatches = 3;
                 boolean turn = true;
                 
+                
                 int matchesWonByA = 0, matchesWonByB = 0;
                 
                 for(int match = 1; match <= numberOfMatches; match++) {
