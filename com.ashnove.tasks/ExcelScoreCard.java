@@ -28,7 +28,7 @@ public class ExcelScoreCard {
 		row = sh.createRow(currentRow++);cell = row.createCell(0);
 		cell.setCellValue("Cricket Game Started");
 		
-//		CellStyle green = wb.createCellStyle();
+		CellStyle orange = wb.createCellStyle();
 		CellStyle blue = wb.createCellStyle(); 
 		
 		int playerA_Hand;
@@ -39,16 +39,22 @@ public class ExcelScoreCard {
 		int numberOfMatches = 4;
 		boolean turn = true;
 		
-		blue.setFillBackgroundColor(IndexedColors.GREEN.getIndex());  
+		blue.setFillBackgroundColor(IndexedColors.PALE_BLUE.getIndex());
+		orange.setFillBackgroundColor(IndexedColors.LIGHT_YELLOW.getIndex());
+		blue.setFillPattern(CellStyle.BIG_SPOTS);
+		orange.setFillPattern(CellStyle.BIG_SPOTS);
+		
 		row = sh.createRow(currentRow++);cell = row.createCell(0);
 		cell.setCellValue("##");
 		cell.setCellStyle(blue);
 		
 		cell = row.createCell(1);
 		cell.setCellValue("PLayer A");
+		cell.setCellStyle(blue);
 		
 		cell = row.createCell(2);
 		cell.setCellValue("PLayer B");
+		cell.setCellStyle(blue);
 
 		int matchesWonByA = 0, matchesWonByB = 0;
 
@@ -99,18 +105,19 @@ public class ExcelScoreCard {
 			}
 			if(turn == true) turn = false;
 			else turn = true;
-			currentRow++;
 		}
 		currentRow++;
 
 		if(matchesWonByA > matchesWonByB) {
 			row = sh.createRow(currentRow++);cell = row.createCell(0);
 			cell.setCellValue("A won the Championship!");
+			cell.setCellStyle(orange);
 
 		}
 		else {
 			row = sh.createRow(currentRow++);cell = row.createCell(0);
 			cell.setCellValue("B won the Championship!");
+			cell.setCellStyle(orange);
 		}
 		wb.write(fos);
 		fos.flush();
