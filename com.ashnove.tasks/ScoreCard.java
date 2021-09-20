@@ -3,9 +3,9 @@ import java.io.FileOutputStream;
 import java.util.*;
 public class ScoreCard {
         public static void main(String[] args)throws Exception {
-//                FastScanner fs = new FastScanner();
-                File file = new File("/home/ashnove/Documents/NETMEDS-WORK/netmeds-java-learning/files/ScoreCardOutput.txt");
-                PrintWriter out = new PrintWriter(file);
+
+//                File file = new File("/home/ashnove/Documents/NETMEDS-WORK/netmeds-java-learning/files/ScoreCardOutput.txt");
+                PrintWriter out = new PrintWriter(System.out);
                 
                 out.println("Cricket Game Started");
            
