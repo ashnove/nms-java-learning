@@ -7,34 +7,20 @@ public class Main {
                 int T = 1;
 //                T = fs.nextInt();
                 for (int tt = 0; tt < T; tt++) {
-                        int n = fs.nextInt();
-                        int a = fs.nextInt();
-                        int b = fs.nextInt();
-                        
-                        int[] x = new int[n];
-                        int[] y = new int[n];
-                        
-                        for(int i = 0; i < n; i++) {
-                        	x[i] = fs.nextInt();
-                        	y[i] = fs.nextInt();
-                        }
-                        
-                        boolean[] head = new boolean[n];
-                        Arrays.fill(head, true);
-                        outer:for(int i = 0; i < n; i++) {
-                        	for(int j = i + 1; j < n; j++) {
-                        		if( (y[i] - b) * (x[j] - a) == (y[j] - b) * (x[i] - a) ) {
-                        			head[i] = false;
-                        			continue outer;
-                        		}
-                        	}
-                        }
-                        int ans = 0;
-                        for(int i = 0; i < n; i++)
-                        	if(head[i])
-                        		ans++;
-                        out.println(ans);
-                        
+                	int n = fs.nextInt();
+                	int[] a = new int[n + 1];
+                	for(int i = 1; i <= n; i++)
+                		a[i] = fs.nextInt();
+                	
+                	Map<Integer, Integer> left = new HashMap<Integer, Integer>();
+                	Map<Integer, Integer> right = new HashMap<Integer, Integer>();
+                	int sum = 0;
+                	for(int i = n; i >= 1; i--) {
+                		sum += a[i];
+                		right.getKey();
+       
+                	}
+                	
                 }
                 out.close();
         }
