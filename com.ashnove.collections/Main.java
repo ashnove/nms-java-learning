@@ -5,23 +5,36 @@ public class Main {
                 FastScanner fs = new FastScanner();
                 PrintWriter out = new PrintWriter(System.out);
                 int T = 1;
-                T = fs.nextInt();
-
+//                T = fs.nextInt();
                 for (int tt = 0; tt < T; tt++) {
                         int n = fs.nextInt();
-                        String s = fs.next();
-
-                        int plus=0, c = 0;
-                        for(int i = 0; i < n; i++)
-                                if(s.charAt(i) == '+')
-                                        plus++;
-                        int ans = Math.max(plus - 1, 0);
-                        for(int i = 0; i < n; i++){
-                                if(s.charAt(i) == '+') plus--;
-                                else c++;
-                                ans = Math.min(ans, c + Math.max(plus - 1, 0));
+                        int a = fs.nextInt();
+                        int b = fs.nextInt();
+                        
+                        int[] x = new int[n];
+                        int[] y = new int[n];
+                        
+                        for(int i = 0; i < n; i++) {
+                        	x[i] = fs.nextInt();
+                        	y[i] = fs.nextInt();
                         }
+                        
+                        boolean[] head = new boolean[n];
+                        Arrays.fill(head, true);
+                        outer:for(int i = 0; i < n; i++) {
+                        	for(int j = i + 1; j < n; j++) {
+                        		if( (y[i] - b) * (x[j] - a) == (y[j] - b) * (x[i] - a) ) {
+                        			head[i] = false;
+                        			continue outer;
+                        		}
+                        	}
+                        }
+                        int ans = 0;
+                        for(int i = 0; i < n; i++)
+                        	if(head[i])
+                        		ans++;
                         out.println(ans);
+                        
                 }
                 out.close();
         }
