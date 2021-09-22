@@ -8,6 +8,7 @@
 </head>
 <body>
 	
+	<h2>Create Operations:</h2>
 	<form action = "addAlien">
 		<input type = "text" name = "FID" placeholder="FID">  <br>
 		<input type = "text" name = "PID" placeholder="PID"> <br>
@@ -19,6 +20,7 @@
 	</form>
 	
 	<br>
+	<h2>Create Operations:</h2>
 	<form action = "getAlien">
 		<input type = "text" name = "aid" placeholder="aid">  <br>
 		<input type = "submit"> <br>
