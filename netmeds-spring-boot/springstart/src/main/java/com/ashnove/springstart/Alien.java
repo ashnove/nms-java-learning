@@ -11,7 +11,7 @@ public class Alien {
 	private String aname;
 	private String tech;
 	
-//	@Autowired
+	@Autowired
 	private Laptop laptop;
 
 	public Laptop getLaptop() {
