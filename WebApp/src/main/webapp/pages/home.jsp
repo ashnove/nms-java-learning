@@ -7,6 +7,6 @@
 <title>title</title>
 </head>
 <body>
-		This is Ashutosh Shaw
+		This is ${name}
 </body>
 </html>
