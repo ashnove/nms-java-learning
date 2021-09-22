@@ -54,7 +54,7 @@ public class Alien {
 	@Override
 	public String toString() {
 		return "Alien [FID=" + FID + ", PID=" + PID + ", Type=" + Type + ", Name=" + Name + ", ParentID=" + ParentID
-				+ ", Description=" + Description + "]" ;
+				+ ", Description=" + Description + "]";
 	}
 	
 	
