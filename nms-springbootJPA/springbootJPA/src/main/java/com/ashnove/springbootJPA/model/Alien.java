@@ -14,13 +14,6 @@ public class Alien {
 	private String ParentID;
 	private String Description;
 	
-	public String getName() {
-		return Name;
-	}
-	public void setName(String name) {
-		Name = name;
-	}
-	
 	public int getFID() {
 		return FID;
 	}
@@ -39,6 +32,12 @@ public class Alien {
 	public void setType(String type) {
 		Type = type;
 	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
 	public String getParentID() {
 		return ParentID;
 	}
@@ -49,6 +48,7 @@ public class Alien {
 		return Description;
 	}
 	public void setDescription(String description) {
+		System.out.println("des=" + description);
 		Description = description;
 	}
 	@Override

@@ -14,7 +14,7 @@
 		<input type = "text" name = "Type" placeholder="Type"> <br>
 		<input type = "text" name = "Name" placeholder="Name"> <br>
 		<input type = "text" name = "ParentID" placeholder="Parent ID"> <br>
-		<input type = "text" name = "Desciption" placeholder="Desciption"> <br>
+		<input type = "text" name = "Description" placeholder="Description"> <br>
 		<input type = "submit"> <br>
 	</form>
 	
