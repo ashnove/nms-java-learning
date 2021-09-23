@@ -3,13 +3,15 @@ package com.ashnove.springbootJPA.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.springframework.stereotype.Component;
+
 @Entity
 public class Alien {
 	
 	@Id
 	private int FID;
 	private String PID;
-	private String Type;
+	private String type;
 	private String Name;
 	private String ParentID;
 	private String Description;
@@ -26,11 +28,11 @@ public class Alien {
 	public void setPID(String pID) {
 		PID = pID;
 	}
-	public String getType() {
-		return Type;
+	public String gettype() {
+		return type;
 	}
-	public void setType(String type) {
-		Type = type;
+	public void settype(String type) {
+		type = type;
 	}
 	public String getName() {
 		return Name;
@@ -53,7 +55,7 @@ public class Alien {
 	}
 	@Override
 	public String toString() {
-		return "Alien [FID=" + FID + ", PID=" + PID + ", Type=" + Type + ", Name=" + Name + ", ParentID=" + ParentID
+		return "Alien [FID=" + FID + ", PID=" + PID + ", type=" + type + ", Name=" + Name + ", ParentID=" + ParentID
 				+ ", Description=" + Description + "]";
 	}
 	
