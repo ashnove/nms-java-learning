@@ -2,8 +2,10 @@ package com.ashnove.springbootJPA.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ashnove.springbootJPA.dao.AlienRepo;
@@ -27,17 +29,11 @@ public class AlienController {
 		return "home.jsp";
 	}
 	
-	@RequestMapping("/getAlien")
-	public ModelAndView getAlien(@RequestParam int PID) {
-		ModelAndView mv = new ModelAndView("showAlien.jsp");
-		Alien alien = repo.findById(PID).orElse(new Alien());
+	@RequestMapping("/alien/{FID}")
+	@ResponseBody
+	public String getAlien(@PathVariable("FID") int FID) {
 		
-		System.out.println(repo.findByType("1"));
-		
-		System.out.println(repo.findByTypeSorted("1"));
-		
-		mv.addObject(alien);
-		return mv;
+		return repo.findById(FID).toString();
 	}
 	
 }
