@@ -13,19 +13,21 @@ public class Employee {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name = "first_name")
+//	@Column(name = "first_name")
 	private String firstName;
-	private String lastNamep;
+//	@Column(name = "last_name")
+	private String lastName;
+//	@Column(name = "emailId")
 	private String emailId;
 	
 	public Employee() {
 		
 	}
 	
-	public Employee(String firstName, String lastNamep, String emailId) {
+	public Employee(String firstName, String lastName, String emailId) {
 		super();
 		this.firstName = firstName;
-		this.lastNamep = lastNamep;
+		this.lastName = lastName;
 		this.emailId = emailId;
 	}
 	public long getId() {
@@ -40,11 +42,11 @@ public class Employee {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public String getLastNamep() {
-		return lastNamep;
+	public String getlastName() {
+		return lastName;
 	}
-	public void setLastNamep(String lastNamep) {
-		this.lastNamep = lastNamep;
+	public void setlastName(String lastName) {
+		this.lastName = lastName;
 	}
 	public String getEmailId() {
 		return emailId;
