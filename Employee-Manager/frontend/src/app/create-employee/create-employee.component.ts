@@ -19,7 +19,7 @@ export class CreateEmployeeComponent implements OnInit {
      
 
     saveEmployee(){
-        this.employeeService.createEmployee(this.employee).subscribe(data=>{
+        this.employeeService.creatEmployee(this.employee).subscribe(data=>{
             console.log(data);
             this.gotoEmployeeList();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
         },
